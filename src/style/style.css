@@ -1,0 +1,57 @@
+.calculator {
+  display: grid;
+  width: 170px;
+  grid-template:
+    "display display"
+    "result result"
+    "functions functions" 
+    "numbers operators";
+    grid-template-columns: 80% 20%;
+  gap: 3px;
+  user-select: none;
+}
+
+.calculator__display {
+  border: 1px solid black;
+  grid-area: display;
+  text-align: right;
+  padding: 3px 10px;
+  height: 30px;
+}
+
+.result {
+  grid-area: result;
+  height: 15px;
+  text-align: right;
+}
+
+.calculator__functions {
+  grid-area: functions;
+  display: flex;
+  gap: 3px;
+}
+
+.calculator__keyboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-area: numbers;
+  gap: 3px;
+}
+
+.number__key,
+.operator__key,
+.function__key {
+  border: 1px solid black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.function__key {
+  width: 100%;
+}
+
+.calculator__operators {
+  display: grid;
+  grid-area: operators;
+  gap: 2px;
+}
